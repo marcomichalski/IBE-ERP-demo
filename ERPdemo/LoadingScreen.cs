@@ -36,7 +36,13 @@ namespace ERPdemo
             {
                 loadingbarTimer.Stop();
 
-                // Finish Loading
+                // Finish Loading, show main menu screen
+
+                ArtikelScreen artikelScreen = new ArtikelScreen();
+                artikelScreen.Show();
+
+                this.Hide();
+
             }
          }
 
