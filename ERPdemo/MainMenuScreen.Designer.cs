@@ -46,6 +46,7 @@ namespace ERPdemo
             this.btnArtikel.TabIndex = 0;
             this.btnArtikel.Text = "Artikel verwalten";
             this.btnArtikel.UseVisualStyleBackColor = true;
+            this.btnArtikel.Click += new System.EventHandler(this.btnArtikel_Click);
             // 
             // MainMenuScreen
             // 

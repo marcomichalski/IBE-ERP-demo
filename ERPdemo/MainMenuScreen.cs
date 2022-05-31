@@ -16,5 +16,13 @@ namespace ERPdemo
         {
             InitializeComponent();
         }
+
+        private void btnArtikel_Click(object sender, EventArgs e)
+        {
+            ArtikelScreen artikelScreen = new ArtikelScreen();
+            artikelScreen.Show();
+
+            this.Hide();
+        }
     }
 }

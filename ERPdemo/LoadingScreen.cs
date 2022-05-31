@@ -38,10 +38,11 @@ namespace ERPdemo
 
                 // Finish Loading, show main menu screen
 
-                ArtikelScreen artikelScreen = new ArtikelScreen();
-                artikelScreen.Show();
+                MainMenuScreen mainMenuScreen = new MainMenuScreen();
+                mainMenuScreen.Show();
 
                 this.Hide();
+
 
             }
          }

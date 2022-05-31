@@ -24,8 +24,6 @@ namespace ERPdemo
         {
             InitializeComponent();
 
-            
-
         }
 
         private void showMaterials()
