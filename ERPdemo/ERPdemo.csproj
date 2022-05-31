@@ -52,6 +52,16 @@
     <Compile Include="ArtikelScreen.Designer.cs">
       <DependentUpon>ArtikelScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="IBE_ERPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IBE_ERPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IBE_ERPDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IBE_ERPDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +95,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="IBE_ERPDataSet.xsc">
+      <DependentUpon>IBE_ERPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IBE_ERPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IBE_ERPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IBE_ERPDataSet.xss">
+      <DependentUpon>IBE_ERPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IBE_ERPDataSet1.xsc">
+      <DependentUpon>IBE_ERPDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="IBE_ERPDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IBE_ERPDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IBE_ERPDataSet1.xss">
+      <DependentUpon>IBE_ERPDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
