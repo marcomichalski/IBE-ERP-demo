@@ -17,6 +17,22 @@ namespace ERPdemo
             InitializeComponent();
         }
 
+     
+
+        // beim schliessen (X drücken)
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnKunde_Click(object sender, EventArgs e)
+        {
+            KundenScreen kundenScreen = new KundenScreen();
+            kundenScreen.Show();
+
+            this.Hide();
+        }
+
         private void btnArtikel_Click(object sender, EventArgs e)
         {
             ArtikelScreen artikelScreen = new ArtikelScreen();

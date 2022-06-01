@@ -62,6 +62,17 @@ namespace ERPdemo
         //    }
         //}
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            MainMenuScreen mainMenuScreen = new MainMenuScreen();
+            mainMenuScreen.Show();
+
+            this.Hide();
+        }
     }
 }

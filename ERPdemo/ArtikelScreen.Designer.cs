@@ -54,6 +54,7 @@ namespace ERPdemo
             this.iBEERPDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t_ArtikelTableAdapter = new ERPdemo.IBE_ERPDataSet1TableAdapters.T_ArtikelTableAdapter();
             this.Auswahlbtn = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tArtikelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBE_ERPDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dboTArtikelBindingSource)).BeginInit();
@@ -225,6 +226,18 @@ namespace ERPdemo
             this.Auswahlbtn.UseVisualStyleBackColor = false;
             this.Auswahlbtn.Click += new System.EventHandler(this.Auswahlbtn_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(28, 553);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(231, 39);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "<  Zurück zum Hauptmenu";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // ArtikelScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +245,7 @@ namespace ERPdemo
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1244, 681);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.Auswahlbtn);
             this.Controls.Add(this.ArtMatDGV);
             this.Controls.Add(this.comboBox1);
@@ -279,5 +293,6 @@ namespace ERPdemo
         private System.Windows.Forms.BindingSource tArtikelBindingSource;
         private IBE_ERPDataSet1TableAdapters.T_ArtikelTableAdapter t_ArtikelTableAdapter;
         private System.Windows.Forms.Button Auswahlbtn;
+        private System.Windows.Forms.Button btnBack;
     }
 }

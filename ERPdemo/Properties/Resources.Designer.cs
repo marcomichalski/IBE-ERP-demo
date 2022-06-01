@@ -63,6 +63,16 @@ namespace ERPdemo.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_button_icon_6 {
+            get {
+                object obj = ResourceManager.GetObject("back-button-icon-6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ib_pic {
             get {
                 object obj = ResourceManager.GetObject("ib pic", resourceCulture);
