@@ -16,7 +16,7 @@ namespace ERPdemo
 
         private SqlConnection databaseConnection = new SqlConnection(@"Data Source=HC-SQL\SQL2017;Initial Catalog=IBE_ERP;Persist Security Info=True;User ID=sa;Password=1234#abc");
 
-        string selectedArtikel;
+        private string selectedArtikel;
 
 
 
@@ -24,6 +24,7 @@ namespace ERPdemo
         {
             InitializeComponent();
 
+            
         }
 
         private void showMaterials()

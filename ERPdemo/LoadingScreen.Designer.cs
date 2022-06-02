@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingScreen));
             this.loadingProgressBar = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.loadingProgress = new System.Windows.Forms.Label();
@@ -40,7 +41,7 @@
             // loadingProgressBar
             // 
             this.loadingProgressBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.loadingProgressBar.Location = new System.Drawing.Point(12, 280);
+            this.loadingProgressBar.Location = new System.Drawing.Point(12, 257);
             this.loadingProgressBar.Name = "loadingProgressBar";
             this.loadingProgressBar.Size = new System.Drawing.Size(660, 23);
             this.loadingProgressBar.TabIndex = 0;
@@ -50,7 +51,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(268, 253);
+            this.label1.Location = new System.Drawing.Point(268, 230);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 21);
             this.label1.TabIndex = 1;
@@ -62,7 +63,7 @@
             this.loadingProgress.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.loadingProgress.AutoSize = true;
             this.loadingProgress.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadingProgress.Location = new System.Drawing.Point(362, 253);
+            this.loadingProgress.Location = new System.Drawing.Point(362, 230);
             this.loadingProgress.Name = "loadingProgress";
             this.loadingProgress.Size = new System.Drawing.Size(37, 21);
             this.loadingProgress.TabIndex = 2;
@@ -97,6 +98,7 @@
             this.Controls.Add(this.loadingProgress);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loadingProgressBar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(700, 400);
             this.MinimizeBox = false;

@@ -52,6 +52,16 @@
     <Compile Include="ArtikelScreen.Designer.cs">
       <DependentUpon>ArtikelScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="IBE_ERPDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IBE_ERPDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IBE_ERPDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IBE_ERPDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="KundenScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +136,28 @@
     <None Include="IBE_ERPDataSet1.xss">
       <DependentUpon>IBE_ERPDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="IBE_ERPDataSet2.xsc">
+      <DependentUpon>IBE_ERPDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="IBE_ERPDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IBE_ERPDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IBE_ERPDataSet2.xss">
+      <DependentUpon>IBE_ERPDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="IBE_ERPDataSet3.xsc">
+      <DependentUpon>IBE_ERPDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="IBE_ERPDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IBE_ERPDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IBE_ERPDataSet3.xss">
+      <DependentUpon>IBE_ERPDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,6 +176,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back-button-icon-6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting room2TP.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

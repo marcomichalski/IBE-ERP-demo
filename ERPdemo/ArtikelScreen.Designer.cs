@@ -254,6 +254,7 @@ namespace ERPdemo
             this.Controls.Add(this.labelArtikelNr);
             this.Controls.Add(this.labelArtikel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ArtikelScreen";
             this.Text = "Artikel";
             this.Load += new System.EventHandler(this.ArtikelScreen_Load);

@@ -113,6 +113,7 @@ namespace ERPdemo
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnKunde);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1150, 716);
             this.MinimumSize = new System.Drawing.Size(1150, 716);
             this.Name = "MainMenuScreen";
