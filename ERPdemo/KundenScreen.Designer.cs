@@ -65,6 +65,8 @@ namespace ERPdemo
             this.iBE_ERPDataSet3 = new ERPdemo.IBE_ERPDataSet3();
             this.tKundenBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.t_KundenTableAdapter2 = new ERPdemo.IBE_ERPDataSet3TableAdapters.T_KundenTableAdapter();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbKnr = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.KundenDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tKundenBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBE_ERPDataSet)).BeginInit();
@@ -120,7 +122,9 @@ namespace ERPdemo
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.KundenDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.KundenDGV.Location = new System.Drawing.Point(2, 296);
+            this.KundenDGV.MultiSelect = false;
             this.KundenDGV.Name = "KundenDGV";
+            this.KundenDGV.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,8 +138,10 @@ namespace ERPdemo
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.KundenDGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.KundenDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.KundenDGV.Size = new System.Drawing.Size(1129, 307);
             this.KundenDGV.TabIndex = 13;
+            this.KundenDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KundenDGV_CellContentClick);
             // 
             // tKundenBindingSource1
             // 
@@ -362,6 +368,29 @@ namespace ERPdemo
             // 
             this.t_KundenTableAdapter2.ClearBeforeFill = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(728, 154);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 24);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "K-Nr";
+            // 
+            // tbKnr
+            // 
+            this.tbKnr.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.tbKnr.Cursor = System.Windows.Forms.Cursors.No;
+            this.tbKnr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbKnr.ForeColor = System.Drawing.Color.Black;
+            this.tbKnr.Location = new System.Drawing.Point(774, 151);
+            this.tbKnr.Name = "tbKnr";
+            this.tbKnr.ReadOnly = true;
+            this.tbKnr.Size = new System.Drawing.Size(136, 29);
+            this.tbKnr.TabIndex = 29;
+            // 
             // KundenScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +398,8 @@ namespace ERPdemo
             this.BackgroundImage = global::ERPdemo.Properties.Resources.meeting_room2TP;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1134, 677);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tbKnr);
             this.Controls.Add(this.btnDeleteClient);
             this.Controls.Add(this.btnClearForm);
             this.Controls.Add(this.btnEditClient);
@@ -439,5 +470,7 @@ namespace ERPdemo
         private IBE_ERPDataSet3 iBE_ERPDataSet3;
         private System.Windows.Forms.BindingSource tKundenBindingSource4;
         private IBE_ERPDataSet3TableAdapters.T_KundenTableAdapter t_KundenTableAdapter2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbKnr;
     }
 }

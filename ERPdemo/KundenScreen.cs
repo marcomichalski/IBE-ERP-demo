@@ -17,6 +17,8 @@ namespace ERPdemo
 
         private SqlConnection databaseConnection = new SqlConnection(@"Data Source=HC-SQL\SQL2017;Initial Catalog=IBE_ERP;Persist Security Info=True;User ID=sa;Password=1234#abc");
 
+        private string lastSelectedClientID;
+
         public KundenScreen()
         {
             InitializeComponent();
@@ -87,11 +89,11 @@ namespace ERPdemo
             string clientTel = tbClientTel.Text;
             string clientEmail = tbClientMail.Text;
 
-            databaseConnection.Open();
-            string addQuery = string.Format("INSERT INTO T_Kunden VALUES ('{0}','{1}','{2}','{3}','{4}')", clientName, clientAddress, clientPLZ, clientTel, clientEmail );
-            SqlCommand sqlCommand = new SqlCommand(addQuery, databaseConnection);
-            sqlCommand.ExecuteNonQuery();
-            databaseConnection.Close();
+            string query = string.Format("INSERT INTO T_Kunden VALUES ('{0}','{1}','{2}','{3}','{4}')", clientName, clientAddress, clientPLZ, clientTel, clientEmail);
+
+            ExecuteQuery(query);
+
+            
 
             ClearAllFields();
             showClients();
@@ -115,9 +117,18 @@ namespace ERPdemo
         private void btnDeleteClient_Click(object sender, EventArgs e)
         {
 
+            if (tbKnr.Text == "")
+            {
+                MessageBox.Show("Bitte wählen Sie zuerst eine Zeile aus");
+                return;
+            }
+            //else
+            //{
+            //    string query = string.Format("DELETE FROM T_Kunden WHERE ('{0}','{1}','{2}','{3}','{4}')", clientName, clientAddress, clientPLZ, clientTel, clientEmail);
+            //    ExecuteQuery(query);
 
-
-            showClients();
+            //    showClients();
+            //}
         }
 
         private void ClearAllFields ()
@@ -127,6 +138,32 @@ namespace ERPdemo
             tbClientMail.Text = "";
             tbClientPLZ.Text = "";
             tbClientTel.Text = "";
+            tbKnr.Text = " ";
+        }
+
+        private void ExecuteQuery (string query)
+        {
+
+            databaseConnection.Open();
+            SqlCommand sqlCommand = new SqlCommand(query, databaseConnection);
+            sqlCommand.ExecuteNonQuery();
+            databaseConnection.Close();
+
+
+        }
+
+        private void KundenDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbKnr.Text = KundenDGV.SelectedRows[0].Cells[0].Value.ToString();
+            tbClientName.Text = KundenDGV.SelectedRows[0].Cells[1].Value.ToString();
+            tbClientAddress.Text = KundenDGV.SelectedRows[0].Cells[2].Value.ToString();
+            tbClientPLZ.Text = KundenDGV.SelectedRows[0].Cells[3].Value.ToString();
+            tbClientTel.Text = KundenDGV.SelectedRows[0].Cells[4].Value.ToString();
+            tbClientMail.Text = KundenDGV.SelectedRows[0].Cells[5].Value.ToString();
+
+            
+
+           // lastSelectedClientID = KundenDGV.SelectedRows[0].Cells[0].Value.ToString();
         }
     }
 }
