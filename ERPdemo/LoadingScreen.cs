@@ -19,6 +19,7 @@ namespace ERPdemo
         public LoadingScreen()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void LoadingScreen_Load(object sender, EventArgs e)

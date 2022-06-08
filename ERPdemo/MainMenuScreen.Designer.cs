@@ -43,12 +43,12 @@ namespace ERPdemo
             this.label1.Font = new System.Drawing.Font("Impact", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(49)))), ((int)(((byte)(83)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(314, 59);
+            this.label1.Location = new System.Drawing.Point(353, 65);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(511, 117);
+            this.label1.Size = new System.Drawing.Size(438, 117);
             this.label1.TabIndex = 3;
-            this.label1.Text = "HAUPTMENU";
+            this.label1.Text = "DEMO  ERP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnArtikel
@@ -63,7 +63,7 @@ namespace ERPdemo
             this.btnArtikel.Name = "btnArtikel";
             this.btnArtikel.Size = new System.Drawing.Size(352, 301);
             this.btnArtikel.TabIndex = 4;
-            this.btnArtikel.Text = "Artikel verwalten";
+            this.btnArtikel.Text = "Artikel Stückliste";
             this.btnArtikel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnArtikel.UseVisualStyleBackColor = true;
             this.btnArtikel.Click += new System.EventHandler(this.btnArtikel_Click);

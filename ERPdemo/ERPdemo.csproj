@@ -52,6 +52,12 @@
     <Compile Include="ArtikelScreen.Designer.cs">
       <DependentUpon>ArtikelScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotifyBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotifyBox.Designer.cs">
+      <DependentUpon>NotifyBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="IBE_ERPDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuScreen.resx">
       <DependentUpon>MainMenuScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifyBox.resx">
+      <DependentUpon>NotifyBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

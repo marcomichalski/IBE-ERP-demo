@@ -17,12 +17,17 @@ namespace ERPdemo
 
         private SqlConnection databaseConnection = new SqlConnection(@"Data Source=HC-SQL\SQL2017;Initial Catalog=IBE_ERP;Persist Security Info=True;User ID=sa;Password=1234#abc");
 
-        private string lastSelectedClientID;
-
+        private int lastSelectedClientKey;
+        
         public KundenScreen()
         {
+          
+
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             showClients();
+           
         }
 
 
@@ -39,6 +44,7 @@ namespace ERPdemo
 
 
             KundenDGV.DataSource = dataSet.Tables[0];
+            KundenDGV.Columns[0].Visible = false;
 
             databaseConnection.Close();
         }
@@ -101,10 +107,33 @@ namespace ERPdemo
 
         private void btnEditClient_Click(object sender, EventArgs e)
         {
-            
+            if (lastSelectedClientKey == 0)
+            {
+                MessageBox.Show("Bitte wählen Sie zuerst eine Zeile aus");
+                return;
+            }
+            else
+            {
 
+                string clientName = tbClientName.Text;
+                string clientAddress = tbClientAddress.Text;
+                string clientPLZ = tbClientPLZ.Text;
+                string clientTel = tbClientTel.Text;
+                string clientEmail = tbClientMail.Text;
 
-            showClients();
+                string query = string.Format("UPDATE T_Kunden SET Ku_Name='{0}', Ku_Adresse='{1}', PLZ='{2}', Ku_Telefon='{3}', [Ku_E-Mail]='{4}' WHERE Ku_idx = " + lastSelectedClientKey
+                    , clientName, clientAddress, clientPLZ, clientTel, clientEmail);
+                ExecuteQuery(query);
+                ClearAllFields();
+
+                NotifyBox frm = new NotifyBox(" Ihre Kundendaten wurden erfolgreich geändert", "");
+                frm.Show();
+
+                //MessageBox.Show("Ihre Kundendaten wurden erfolgreich geändert");
+                showClients();
+
+            }
+
         }
 
         private void btnClearForm_Click(object sender, EventArgs e)
@@ -117,18 +146,29 @@ namespace ERPdemo
         private void btnDeleteClient_Click(object sender, EventArgs e)
         {
 
-            if (tbKnr.Text == "")
+            if (lastSelectedClientKey == 0)
             {
-                MessageBox.Show("Bitte wählen Sie zuerst eine Zeile aus");
+
+
+                NotifyBox frm = new NotifyBox(" Bitte wählen Sie zuerst eine Zeile aus", "");
+                frm.Show();
+
+                //MessageBox.Show("Bitte wählen Sie zuerst eine Zeile aus");
                 return;
             }
-            //else
-            //{
-            //    string query = string.Format("DELETE FROM T_Kunden WHERE ('{0}','{1}','{2}','{3}','{4}')", clientName, clientAddress, clientPLZ, clientTel, clientEmail);
-            //    ExecuteQuery(query);
+            else
+            {
+                string query = string.Format("DELETE FROM T_Kunden WHERE Ku_idx = " + lastSelectedClientKey);
+                string deleteConfirmName = tbClientName.Text;
+                ExecuteQuery(query);
 
-            //    showClients();
-            //}
+                ClearAllFields();
+                showClients();
+                NotifyBox frm = new NotifyBox("Der Kunde '" + deleteConfirmName + "' wurde erfolgreich gelöscht", "");
+                frm.Show();
+
+                //MessageBox.Show("Der Kunde '" + deleteConfirmName + "' wurde erfolgreich gelöscht");
+            }
         }
 
         private void ClearAllFields ()
@@ -154,16 +194,19 @@ namespace ERPdemo
 
         private void KundenDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            tbKnr.Text = KundenDGV.SelectedRows[0].Cells[0].Value.ToString();
-            tbClientName.Text = KundenDGV.SelectedRows[0].Cells[1].Value.ToString();
-            tbClientAddress.Text = KundenDGV.SelectedRows[0].Cells[2].Value.ToString();
-            tbClientPLZ.Text = KundenDGV.SelectedRows[0].Cells[3].Value.ToString();
-            tbClientTel.Text = KundenDGV.SelectedRows[0].Cells[4].Value.ToString();
-            tbClientMail.Text = KundenDGV.SelectedRows[0].Cells[5].Value.ToString();
-
             
+            tbKnr.Text = KundenDGV.SelectedRows[0].Cells[1].Value.ToString();
+            tbClientName.Text = KundenDGV.SelectedRows[0].Cells[2].Value.ToString();
+            tbClientAddress.Text = KundenDGV.SelectedRows[0].Cells[3].Value.ToString();
+            tbClientPLZ.Text = KundenDGV.SelectedRows[0].Cells[4].Value.ToString();
+            tbClientTel.Text = KundenDGV.SelectedRows[0].Cells[5].Value.ToString();
+            tbClientMail.Text = KundenDGV.SelectedRows[0].Cells[6].Value.ToString();
 
-           // lastSelectedClientID = KundenDGV.SelectedRows[0].Cells[0].Value.ToString();
+
+            lastSelectedClientKey = (int)KundenDGV.SelectedRows[0].Cells[0].Value;
+           
         }
+
+       
     }
 }

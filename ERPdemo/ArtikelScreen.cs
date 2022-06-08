@@ -23,8 +23,9 @@ namespace ERPdemo
         public ArtikelScreen()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
 
-            
+
         }
 
         private void showMaterials()

@@ -15,6 +15,7 @@ namespace ERPdemo
         public MainMenuScreen()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
      

@@ -227,6 +227,7 @@ namespace ERPdemo
             this.tbClientPLZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbClientPLZ.ForeColor = System.Drawing.Color.Black;
             this.tbClientPLZ.Location = new System.Drawing.Point(774, 194);
+            this.tbClientPLZ.MaxLength = 5;
             this.tbClientPLZ.Name = "tbClientPLZ";
             this.tbClientPLZ.Size = new System.Drawing.Size(136, 29);
             this.tbClientPLZ.TabIndex = 17;
@@ -373,7 +374,7 @@ namespace ERPdemo
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(728, 154);
+            this.label6.Location = new System.Drawing.Point(726, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 24);
             this.label6.TabIndex = 30;
