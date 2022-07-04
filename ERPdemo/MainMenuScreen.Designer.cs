@@ -63,7 +63,7 @@ namespace ERPdemo
             this.btnArtikel.Name = "btnArtikel";
             this.btnArtikel.Size = new System.Drawing.Size(352, 301);
             this.btnArtikel.TabIndex = 4;
-            this.btnArtikel.Text = "Artikel Stückliste";
+            this.btnArtikel.Text = "Artikel";
             this.btnArtikel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnArtikel.UseVisualStyleBackColor = true;
             this.btnArtikel.Click += new System.EventHandler(this.btnArtikel_Click);
@@ -84,6 +84,7 @@ namespace ERPdemo
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseMnemonic = false;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnKunde
             // 

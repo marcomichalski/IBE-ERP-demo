@@ -32,22 +32,15 @@ namespace ERPdemo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArtikelScreen));
             this.labelArtikel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.labelArtikelNr = new System.Windows.Forms.Label();
-            this.l = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tWorkOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iB34DB_AppCore_20220609DataSet = new ERPdemo.IB34DB_AppCore_20220609DataSet();
             this.tArtikelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iBE_ERPDataSet1 = new ERPdemo.IBE_ERPDataSet1();
             this.dboTArtikelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iBE_ERPDataSet = new ERPdemo.IBE_ERPDataSet();
-            this.ArtMatDGV = new System.Windows.Forms.DataGridView();
             this.dbo_T_ArtikelTableAdapter = new ERPdemo.IBE_ERPDataSetTableAdapters.dbo_T_ArtikelTableAdapter();
             this.dboTArtikelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.iBEERPDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -55,14 +48,28 @@ namespace ERPdemo
             this.t_ArtikelTableAdapter = new ERPdemo.IBE_ERPDataSet1TableAdapters.T_ArtikelTableAdapter();
             this.Auswahlbtn = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.t_WorkOrderTableAdapter = new ERPdemo.IB34DB_AppCore_20220609DataSetTableAdapters.T_WorkOrderTableAdapter();
+            this.picBox_iv = new System.Windows.Forms.PictureBox();
+            this.picBox_hv = new System.Windows.Forms.PictureBox();
+            this.picBox_sa = new System.Windows.Forms.PictureBox();
+            this.label_iv_text = new System.Windows.Forms.Label();
+            this.label_iv_title = new System.Windows.Forms.Label();
+            this.label_sa_title = new System.Windows.Forms.Label();
+            this.label_sa_text = new System.Windows.Forms.Label();
+            this.label_hv_title = new System.Windows.Forms.Label();
+            this.label_hv_text = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tWorkOrderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iB34DB_AppCore_20220609DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tArtikelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBE_ERPDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dboTArtikelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBE_ERPDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArtMatDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dboTArtikelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBEERPDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBEERPDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_iv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_hv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_sa)).BeginInit();
             this.SuspendLayout();
             // 
             // labelArtikel
@@ -70,56 +77,34 @@ namespace ERPdemo
             this.labelArtikel.AutoSize = true;
             this.labelArtikel.BackColor = System.Drawing.Color.Transparent;
             this.labelArtikel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelArtikel.Location = new System.Drawing.Point(58, 38);
+            this.labelArtikel.Location = new System.Drawing.Point(231, 57);
             this.labelArtikel.Name = "labelArtikel";
             this.labelArtikel.Size = new System.Drawing.Size(61, 24);
             this.labelArtikel.TabIndex = 0;
             this.labelArtikel.Text = "Artikel";
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(911, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 29);
-            this.textBox2.TabIndex = 3;
-            // 
-            // labelArtikelNr
-            // 
-            this.labelArtikelNr.AutoSize = true;
-            this.labelArtikelNr.BackColor = System.Drawing.Color.Transparent;
-            this.labelArtikelNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelArtikelNr.Location = new System.Drawing.Point(805, 35);
-            this.labelArtikelNr.Name = "labelArtikelNr";
-            this.labelArtikelNr.Size = new System.Drawing.Size(87, 24);
-            this.labelArtikelNr.TabIndex = 2;
-            this.labelArtikelNr.Text = "Artikel-Nr";
-            // 
-            // l
-            // 
-            this.l.AutoSize = true;
-            this.l.BackColor = System.Drawing.Color.Transparent;
-            this.l.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l.Location = new System.Drawing.Point(58, 139);
-            this.l.Name = "l";
-            this.l.Size = new System.Drawing.Size(75, 24);
-            this.l.TabIndex = 6;
-            this.l.Text = "Material";
-            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.comboBox1.DataSource = this.tArtikelBindingSource;
-            this.comboBox1.DisplayMember = "Art_Artikel_Bez";
+            this.comboBox1.DataSource = this.tWorkOrderBindingSource;
+            this.comboBox1.DisplayMember = "Name";
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(164, 30);
+            this.comboBox1.Location = new System.Drawing.Point(337, 53);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(452, 32);
             this.comboBox1.TabIndex = 8;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // tWorkOrderBindingSource
+            // 
+            this.tWorkOrderBindingSource.DataMember = "T_WorkOrder";
+            this.tWorkOrderBindingSource.DataSource = this.iB34DB_AppCore_20220609DataSet;
+            // 
+            // iB34DB_AppCore_20220609DataSet
+            // 
+            this.iB34DB_AppCore_20220609DataSet.DataSetName = "IB34DB_AppCore_20220609DataSet";
+            this.iB34DB_AppCore_20220609DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tArtikelBindingSource
             // 
@@ -140,55 +125,6 @@ namespace ERPdemo
             // 
             this.iBE_ERPDataSet.DataSetName = "IBE_ERPDataSet";
             this.iBE_ERPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ArtMatDGV
-            // 
-            this.ArtMatDGV.AllowUserToAddRows = false;
-            this.ArtMatDGV.AllowUserToDeleteRows = false;
-            this.ArtMatDGV.AllowUserToResizeColumns = false;
-            this.ArtMatDGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ArtMatDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.ArtMatDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ArtMatDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.ArtMatDGV.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ArtMatDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ArtMatDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.ArtMatDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ArtMatDGV.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ArtMatDGV.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ArtMatDGV.Location = new System.Drawing.Point(166, 139);
-            this.ArtMatDGV.Name = "ArtMatDGV";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ArtMatDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.ArtMatDGV.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ArtMatDGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.ArtMatDGV.Size = new System.Drawing.Size(863, 307);
-            this.ArtMatDGV.TabIndex = 9;
             // 
             // dbo_T_ArtikelTableAdapter
             // 
@@ -218,7 +154,7 @@ namespace ERPdemo
             this.Auswahlbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.Auswahlbtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Auswahlbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Auswahlbtn.Location = new System.Drawing.Point(647, 30);
+            this.Auswahlbtn.Location = new System.Drawing.Point(820, 53);
             this.Auswahlbtn.Name = "Auswahlbtn";
             this.Auswahlbtn.Size = new System.Drawing.Size(103, 32);
             this.Auswahlbtn.TabIndex = 10;
@@ -238,6 +174,115 @@ namespace ERPdemo
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // t_WorkOrderTableAdapter
+            // 
+            this.t_WorkOrderTableAdapter.ClearBeforeFill = true;
+            // 
+            // picBox_iv
+            // 
+            this.picBox_iv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_iv.BackgroundImage")));
+            this.picBox_iv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBox_iv.InitialImage = null;
+            this.picBox_iv.Location = new System.Drawing.Point(235, 150);
+            this.picBox_iv.Name = "picBox_iv";
+            this.picBox_iv.Size = new System.Drawing.Size(211, 372);
+            this.picBox_iv.TabIndex = 12;
+            this.picBox_iv.TabStop = false;
+            // 
+            // picBox_hv
+            // 
+            this.picBox_hv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_hv.BackgroundImage")));
+            this.picBox_hv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBox_hv.InitialImage = null;
+            this.picBox_hv.Location = new System.Drawing.Point(61, 150);
+            this.picBox_hv.Name = "picBox_hv";
+            this.picBox_hv.Size = new System.Drawing.Size(493, 372);
+            this.picBox_hv.TabIndex = 13;
+            this.picBox_hv.TabStop = false;
+            this.picBox_hv.Visible = false;
+            // 
+            // picBox_sa
+            // 
+            this.picBox_sa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBox_sa.BackgroundImage")));
+            this.picBox_sa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBox_sa.InitialImage = null;
+            this.picBox_sa.Location = new System.Drawing.Point(52, 150);
+            this.picBox_sa.Name = "picBox_sa";
+            this.picBox_sa.Size = new System.Drawing.Size(502, 372);
+            this.picBox_sa.TabIndex = 14;
+            this.picBox_sa.TabStop = false;
+            this.picBox_sa.Visible = false;
+            // 
+            // label_iv_text
+            // 
+            this.label_iv_text.AutoSize = true;
+            this.label_iv_text.BackColor = System.Drawing.Color.Transparent;
+            this.label_iv_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_iv_text.Location = new System.Drawing.Point(593, 224);
+            this.label_iv_text.Name = "label_iv_text";
+            this.label_iv_text.Size = new System.Drawing.Size(507, 240);
+            this.label_iv_text.TabIndex = 15;
+            this.label_iv_text.Text = resources.GetString("label_iv_text.Text");
+            // 
+            // label_iv_title
+            // 
+            this.label_iv_title.AutoSize = true;
+            this.label_iv_title.BackColor = System.Drawing.Color.Transparent;
+            this.label_iv_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_iv_title.Location = new System.Drawing.Point(592, 150);
+            this.label_iv_title.Name = "label_iv_title";
+            this.label_iv_title.Size = new System.Drawing.Size(570, 50);
+            this.label_iv_title.TabIndex = 16;
+            this.label_iv_title.Text = "Installationsverteiler nach VDE und zuständiger TAB \r\nder Energieversorger\r\n";
+            // 
+            // label_sa_title
+            // 
+            this.label_sa_title.AutoSize = true;
+            this.label_sa_title.BackColor = System.Drawing.Color.Transparent;
+            this.label_sa_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_sa_title.Location = new System.Drawing.Point(592, 150);
+            this.label_sa_title.Name = "label_sa_title";
+            this.label_sa_title.Size = new System.Drawing.Size(216, 25);
+            this.label_sa_title.TabIndex = 17;
+            this.label_sa_title.Text = "Steuerungsanlagen";
+            this.label_sa_title.Visible = false;
+            // 
+            // label_sa_text
+            // 
+            this.label_sa_text.AutoSize = true;
+            this.label_sa_text.BackColor = System.Drawing.Color.Transparent;
+            this.label_sa_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_sa_text.Location = new System.Drawing.Point(599, 200);
+            this.label_sa_text.Name = "label_sa_text";
+            this.label_sa_text.Size = new System.Drawing.Size(697, 264);
+            this.label_sa_text.TabIndex = 18;
+            this.label_sa_text.Text = resources.GetString("label_sa_text.Text");
+            this.label_sa_text.Visible = false;
+            // 
+            // label_hv_title
+            // 
+            this.label_hv_title.AutoSize = true;
+            this.label_hv_title.BackColor = System.Drawing.Color.Transparent;
+            this.label_hv_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_hv_title.Location = new System.Drawing.Point(598, 150);
+            this.label_hv_title.Name = "label_hv_title";
+            this.label_hv_title.Size = new System.Drawing.Size(210, 25);
+            this.label_hv_title.TabIndex = 19;
+            this.label_hv_title.Text = "Hochstromverteiler";
+            this.label_hv_title.Visible = false;
+            // 
+            // label_hv_text
+            // 
+            this.label_hv_text.AutoSize = true;
+            this.label_hv_text.BackColor = System.Drawing.Color.Transparent;
+            this.label_hv_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_hv_text.Location = new System.Drawing.Point(593, 200);
+            this.label_hv_text.Name = "label_hv_text";
+            this.label_hv_text.Size = new System.Drawing.Size(612, 384);
+            this.label_hv_text.TabIndex = 20;
+            this.label_hv_text.Text = resources.GetString("label_hv_text.Text");
+            this.label_hv_text.Visible = false;
+            // 
             // ArtikelScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,27 +290,36 @@ namespace ERPdemo
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1244, 681);
+            this.Controls.Add(this.label_hv_text);
+            this.Controls.Add(this.label_hv_title);
+            this.Controls.Add(this.label_sa_text);
+            this.Controls.Add(this.label_sa_title);
+            this.Controls.Add(this.label_iv_title);
+            this.Controls.Add(this.label_iv_text);
+            this.Controls.Add(this.picBox_sa);
+            this.Controls.Add(this.picBox_hv);
+            this.Controls.Add(this.picBox_iv);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.Auswahlbtn);
-            this.Controls.Add(this.ArtMatDGV);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.l);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.labelArtikelNr);
             this.Controls.Add(this.labelArtikel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ArtikelScreen";
             this.Text = "Artikel";
             this.Load += new System.EventHandler(this.ArtikelScreen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tWorkOrderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iB34DB_AppCore_20220609DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tArtikelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBE_ERPDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dboTArtikelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBE_ERPDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArtMatDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dboTArtikelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBEERPDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iBEERPDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_iv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_hv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_sa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,11 +333,7 @@ namespace ERPdemo
         #endregion
 
         private System.Windows.Forms.Label labelArtikel;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label labelArtikelNr;
-        private System.Windows.Forms.Label l;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView ArtMatDGV;
         private IBE_ERPDataSet iBE_ERPDataSet;
         private System.Windows.Forms.BindingSource dboTArtikelBindingSource;
         private IBE_ERPDataSetTableAdapters.dbo_T_ArtikelTableAdapter dbo_T_ArtikelTableAdapter;
@@ -295,5 +345,17 @@ namespace ERPdemo
         private IBE_ERPDataSet1TableAdapters.T_ArtikelTableAdapter t_ArtikelTableAdapter;
         private System.Windows.Forms.Button Auswahlbtn;
         private System.Windows.Forms.Button btnBack;
+        private IB34DB_AppCore_20220609DataSet iB34DB_AppCore_20220609DataSet;
+        private System.Windows.Forms.BindingSource tWorkOrderBindingSource;
+        private IB34DB_AppCore_20220609DataSetTableAdapters.T_WorkOrderTableAdapter t_WorkOrderTableAdapter;
+        private System.Windows.Forms.PictureBox picBox_iv;
+        private System.Windows.Forms.PictureBox picBox_hv;
+        private System.Windows.Forms.PictureBox picBox_sa;
+        private System.Windows.Forms.Label label_iv_text;
+        private System.Windows.Forms.Label label_iv_title;
+        private System.Windows.Forms.Label label_sa_title;
+        private System.Windows.Forms.Label label_sa_text;
+        private System.Windows.Forms.Label label_hv_title;
+        private System.Windows.Forms.Label label_hv_text;
     }
 }

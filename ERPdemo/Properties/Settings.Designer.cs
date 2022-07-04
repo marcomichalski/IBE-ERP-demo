@@ -33,5 +33,16 @@ namespace ERPdemo.Properties {
                 return ((string)(this["IBE_ERPConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HC-SQL\\SQL2017;Initial Catalog=IB34DB_AppCore_20220609;Persist Securi" +
+            "ty Info=True;User ID=sa;Password=1234#abc")]
+        public string IB34DB_AppCore_20220609ConnectionString {
+            get {
+                return ((string)(this["IB34DB_AppCore_20220609ConnectionString"]));
+            }
+        }
     }
 }

@@ -41,5 +41,13 @@ namespace ERPdemo
 
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Auftraege auftraegeScreen = new Auftraege();
+            auftraegeScreen.Show();
+
+            this.Hide();
+        }
     }
 }

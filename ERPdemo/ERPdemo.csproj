@@ -52,6 +52,17 @@
     <Compile Include="ArtikelScreen.Designer.cs">
       <DependentUpon>ArtikelScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Auftraege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auftraege.Designer.cs">
+      <DependentUpon>Auftraege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IB34DB_AppCore_20220609DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IB34DB_AppCore_20220609DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NotifyBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +112,9 @@
     <EmbeddedResource Include="ArtikelScreen.resx">
       <DependentUpon>ArtikelScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Auftraege.resx">
+      <DependentUpon>Auftraege.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KundenScreen.resx">
       <DependentUpon>KundenScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +137,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="IB34DB_AppCore_20220609DataSet.xsc">
+      <DependentUpon>IB34DB_AppCore_20220609DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IB34DB_AppCore_20220609DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IB34DB_AppCore_20220609DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IB34DB_AppCore_20220609DataSet.xss">
+      <DependentUpon>IB34DB_AppCore_20220609DataSet.xsd</DependentUpon>
+    </None>
     <None Include="IBE_ERPDataSet.xsc">
       <DependentUpon>IBE_ERPDataSet.xsd</DependentUpon>
     </None>
@@ -188,6 +213,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\meeting room2TP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\hv.jpg" />
+    <Content Include="Resources\iv.jpg" />
+    <Content Include="Resources\sa.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
